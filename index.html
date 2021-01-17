@@ -13,7 +13,18 @@
     <body style="margin : 0px; overflow: hidden;">
     
      <a-scene embedded arjs="sourcetype: webcam:">
-        <a-box color="red"></a-box>
+        
+       <a-entity obj-model="obj:url(./globe/new_globe.obj); mtl:url(./globe/new_globe.mtl)" position='0 0.9 0'>
+
+               <a-animation attribute="rotation"
+                             dur="5000"
+                             dur="5500"
+                             to="0 360 0"
+                             repeat="indefinite"
+                             easing="linear">
+                 </a-animation>  
+            
+            </a-entity>
         
         <a-marker-camera preset="custom"
            type="pattern"
